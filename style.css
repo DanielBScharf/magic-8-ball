@@ -1,0 +1,53 @@
+img {
+  width: 400px;
+  border-radius: 50%;
+  z-index: 2;
+  position: absolute;
+  top: 10%;
+  left: 24%;
+  /* position: absolute; */
+}
+
+.pdiv {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+  height: 90px;
+  width: 150px;
+  position: absolute;
+  left: 45%;
+  top: 50%;
+  /* overflow: scroll; */
+  margin: 0;
+  padding: 0;
+}
+
+p {
+  color: aliceblue;
+  z-index: 10;
+  left: 100px;
+  top: 400px;
+}
+
+.answerBox {
+  /* display: flex; */
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  width: 90vw;
+  position: relative;
+}
+
+.ball {
+  width: 700px;
+  height: 700px;
+  background-color: black;
+  border-radius: 50%;
+  position: absolute;
+  align-items: center;
+  z-index: -1;
+  justify-content: center;
+  left: 30%;
+  top: 20%;
+}
