@@ -4,24 +4,31 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="background.css">
   <title>Magic 8 ball</title>
 </head>
 <body>
-  <div>
-    <form id="question" action="">
-      <label for="text">What question do you wish to ask the Magic 8-Ball</label>
-      <input type="text" name="text" id="asked">
-      <input id="askQuestion" type="submit">
-    </form>
-  </div>
-  <div class="answerbox">
-    <div class="ball">
-      <img class="ballWindow" src="./images/triange.png" alt="">
+  <div id="controls">
+    <div class="all">
+      <div class="intro">
+        <h1>Magic 8-Ball</h1>
+        <form id="question" action="">
+          <label for="text">What question do you wish to ask the Magic 8-Ball:</label>
+          <input type="text" name="text" id="asked">
+          <input id="askQuestion" type="submit">
+        </form>
+      </div>
+      <div class="answerbox">
+        <div class="ball">
+          <img class="ballWindow" src="./images/triange.png" alt="">
+          <div class="pdiv">
+            <p class="answer"></p>
+          </div>
+        </div>
+      </div>
     </div>
-    <div class="pdiv">
-      <p class="answer"></p>
     </div>
-  </div>
   <script src="index.js"></script>
+  <script src="background.js"></script>
 </body>
 </html>

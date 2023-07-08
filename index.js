@@ -29,18 +29,21 @@ const answers = [
   'YES! Erm actually... no',
   'Why are you asking me?',
   'How should I know?',
-  " "
+  '" "'
 ]
 
 const newQuestion = document.querySelector('#question');
-const question = document.getElementById('asked');
+const question = document.getElementById('.asked');
 const answer = document.querySelector('.answer');
+
+function choose(el) {
+  el.classList.add('fade-in');
+  el.innerText = answers[Math.floor(Math.random() * answers.length)];
+};
 
 newQuestion.addEventListener('submit', function(e){
   e.preventDefault();
-  const answ = Math.floor(Math.random() * answers.length);
-  console.log(answ);
-  console.log(answers[answ]);
-  answer.innerText = answers[answ];
-  question.value = "";
-})
+  answer.innerText = "";
+  choose(answer);
+  newQuestion.reset();
+});

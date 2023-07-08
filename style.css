@@ -3,31 +3,37 @@ img {
   border-radius: 50%;
   z-index: 2;
   position: absolute;
-  top: 10%;
-  left: 24%;
-  /* position: absolute; */
+  top: 150px;
+  left: 150px;
 }
 
 .pdiv {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  /* display: flex; */
   z-index: 10;
   height: 90px;
   width: 150px;
   position: absolute;
-  left: 45%;
-  top: 50%;
+  left: 300px;
+  top: 38%;
   /* overflow: scroll; */
-  margin: 0;
   padding: 0;
 }
 
-p {
+.answer {
+  text-align: center;
   color: aliceblue;
-  z-index: 10;
-  left: 100px;
-  top: 400px;
+  font-family: "Open Sans", "Helvetica Neue", sans-serif;
+  font-weight: bold;
+  position: absolute;
+  left: 1px;
+}
+
+.fade-in {
+  animation: fadeIn 5s;
+  -webkit-animation: fadeIn 5s;
+  -moz-animation: fadeIn 5s;
+  -o-animation: fadeIn 5s;
+  -ms-animation: fadeIn 5s;
 }
 
 .answerBox {
@@ -36,7 +42,8 @@ p {
   justify-content: center;
   box-sizing: border-box;
   width: 90vw;
-  position: relative;
+  position: absolute;
+  display: grid;
 }
 
 .ball {
@@ -44,10 +51,47 @@ p {
   height: 700px;
   background-color: black;
   border-radius: 50%;
-  position: absolute;
+  position: relative;
   align-items: center;
-  z-index: -1;
+  z-index: 1;
   justify-content: center;
-  left: 30%;
+  left: 25%;
+  top: 150px;
+}
+
+.ballWindow {
   top: 20%;
 }
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+.intro {
+  display: grid;
+  justify-content: center;
+  justify-items: center;
+}
+
+#question {
+  display: grid;
+}
+
+.all {
+  max-width: 960px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* * { margin:0; padding:0; }
+html, body { width:100%; height:100%; overflow: hidden;}
+canvas { display:block; }
+#controls {
+  margin: 20px;
+  position: absolute;
+  top: 0; left: 0;
+  color: white;
+} */
