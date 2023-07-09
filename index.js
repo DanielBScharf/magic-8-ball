@@ -32,14 +32,12 @@ const answers = [
   '" "'
 ]
 
-const newQuestion = document.querySelector('#question');
+const newQuestion = document.querySelector('#askQuestion');
 const question = document.getElementById('.asked');
 const answer = document.querySelector('#answer');
 
-function choose(el) {
-  // el.classList.remove('fade-in');
-  // el.classList.add('fade-in');
-  el.innerText = answers[Math.floor(Math.random() * answers.length)];
+function choose() {
+ return answers[Math.floor(Math.random() * answers.length)];
 };
 
 // newQuestion.addEventListener('submit', function(e){
@@ -50,14 +48,17 @@ function choose(el) {
 // });
 
 answer.style.opacity = 0;
-answer.innerHTML = answers[Math.floor(Math.random() * answers.length)];
+
 function go(event){
-    event.preventDefault();
+  answer.innerHTML = choose();
+  event.preventDefault();
     answer.style.opacity = 0;
     setTimeout(() => {
       answer.style.opacity = 1;
       answer.classList.add('fade-in');
     }, 1000);
     answer.classList.remove('fade-in');
-}
+    document.querySelector('#question').reset();
+};
+
 newQuestion.addEventListener('click', go);
