@@ -8,7 +8,6 @@ const answers = [
   'As I see it, maybe',
   'Kinda likely',
   'Outlook ok',
-  '20!',
   'Signs point to yes',
   'Signs point to maybe',
   'Reply hazy, try again',
@@ -29,7 +28,9 @@ const answers = [
   'YES! Erm actually... no',
   'Why are you asking me?',
   'How should I know?',
-  '" "'
+  'Probably... maybe',
+  "Oh...You'll find out",
+  '...'
 ]
 
 const newQuestion = document.querySelector('#askQuestion');
@@ -39,13 +40,6 @@ const answer = document.querySelector('#answer');
 function choose() {
  return answers[Math.floor(Math.random() * answers.length)];
 };
-
-// newQuestion.addEventListener('submit', function(e){
-//   e.preventDefault();
-//   answer.innerText = "";
-//   choose(answer);
-//   newQuestion.reset();
-// });
 
 answer.style.opacity = 0;
 
