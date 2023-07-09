@@ -34,16 +34,30 @@ const answers = [
 
 const newQuestion = document.querySelector('#question');
 const question = document.getElementById('.asked');
-const answer = document.querySelector('.answer');
+const answer = document.querySelector('#answer');
 
 function choose(el) {
-  el.classList.add('fade-in');
+  // el.classList.remove('fade-in');
+  // el.classList.add('fade-in');
   el.innerText = answers[Math.floor(Math.random() * answers.length)];
 };
 
-newQuestion.addEventListener('submit', function(e){
-  e.preventDefault();
-  answer.innerText = "";
-  choose(answer);
-  newQuestion.reset();
-});
+// newQuestion.addEventListener('submit', function(e){
+//   e.preventDefault();
+//   answer.innerText = "";
+//   choose(answer);
+//   newQuestion.reset();
+// });
+
+answer.style.opacity = 0;
+answer.innerHTML = answers[Math.floor(Math.random() * answers.length)];
+function go(event){
+    event.preventDefault();
+    answer.style.opacity = 0;
+    setTimeout(() => {
+      answer.style.opacity = 1;
+      answer.classList.add('fade-in');
+    }, 1000);
+    answer.classList.remove('fade-in');
+}
+newQuestion.addEventListener('click', go);
